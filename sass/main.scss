@@ -11,6 +11,7 @@
 
 html {
 	font-size: 62.5%;
+	scroll-behavior: smooth;
 }
 
 body {
@@ -39,6 +40,16 @@ body {
 
 	&__logo {
 		margin: 1em;
+		
+		a{
+			display: flex;
+			align-items: center;
+			
+			.material-symbols-outlined{
+				font-size: 3rem;
+				margin-right: 0.5em;
+			}
+		}
 
 		&-item {
 			text-decoration: none;
@@ -74,12 +85,7 @@ body {
 	}
 }
 
-#particles-js {
-	background-image: $linear, url('../img/header-mobile.jpg');
-	background-position: center;
-	background-size: cover;
-	background-attachment: fixed;
-}
+
 
 //-----------------------
 //HEADER
@@ -125,6 +131,12 @@ body {
 	}
 }
 
+#particles-js {
+	background-image: $linear, url('../img/header-mobile.jpg');
+	background-position: center;
+	background-size: cover;
+}
+
 //-----------------------
 //ABOUTME
 //-----------------------
@@ -132,7 +144,7 @@ body {
 .about {
 	position: relative;
 	width: 100%;
-	height: 70vh;
+	height: 85vh;
 	background-image: $linear-about, url('../img/about-big.jpg');
 	background-attachment: fixed;
 	background-position: center;
@@ -141,6 +153,13 @@ body {
 	justify-content: center;
 	align-items: center;
 
+
+	&__heading{
+		text-transform: uppercase;
+		color: $main-color;
+		font-size: 5rem;
+		margin-bottom: 1em;
+	}
 	&__box {
 		max-width: 1000px;
 		background-color: rgba(0, 0, 0, 0.4);
@@ -151,9 +170,9 @@ body {
 
 	&__img {
 		float: left;
-		height: 100px;
-		width: 100px;
-		margin: 1.5em;
+		height: 140px;
+		width: 140px;
+		margin-right: 3em;
 		border-radius: 50%;
 		border-style: none;
 	}
@@ -210,6 +229,24 @@ body {
 	#particles-js {
 		background-image: $linear, url('../img/header-desctop.jpg');
 	}
+
+		//-----------------------
+	//ABOUUS
+	//-----------------------
+
+	.about{
+		&__text{
+			font-size: 2.4rem;
+		}
+
+		&__media{
+			a{
+				font-size: 4rem;
+			}
+			
+		}
+	}
+
 }
 
 @media (min-width: 1200px) {

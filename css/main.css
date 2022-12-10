@@ -22,6 +22,7 @@
 
 html {
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -47,6 +48,14 @@ body {
 }
 .nav__logo {
   margin: 1em;
+}
+.nav__logo a {
+  display: flex;
+  align-items: center;
+}
+.nav__logo a .material-symbols-outlined {
+  font-size: 3rem;
+  margin-right: 0.5em;
 }
 .nav__logo-item {
   text-decoration: none;
@@ -74,13 +83,6 @@ body {
 .nav__translate {
   display: inline-block;
   text-decoration: none;
-}
-
-#particles-js {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/header-mobile.jpg");
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .header {
@@ -116,10 +118,16 @@ body {
   opacity: 1;
 }
 
+#particles-js {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/header-mobile.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
 .about {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 85vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/about-big.jpg");
   background-attachment: fixed;
   background-position: center;
@@ -127,6 +135,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.about__heading {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  font-size: 5rem;
+  margin-bottom: 1em;
 }
 .about__box {
   max-width: 1000px;
@@ -137,9 +151,9 @@ body {
 }
 .about__img {
   float: left;
-  height: 100px;
-  width: 100px;
-  margin: 1.5em;
+  height: 140px;
+  width: 140px;
+  margin-right: 3em;
   border-radius: 50%;
   border-style: none;
 }
@@ -179,6 +193,12 @@ body {
   }
   #particles-js {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/header-desctop.jpg");
+  }
+  .about__text {
+    font-size: 2.4rem;
+  }
+  .about__media a {
+    font-size: 4rem;
   }
 }
 @media (min-width: 1200px) {
