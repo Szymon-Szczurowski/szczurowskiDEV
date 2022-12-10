@@ -1,3 +1,17 @@
+.section-padding {
+  padding: 0 4em;
+}
+
+.section-heading {
+  position: relative;
+  margin-bottom: 2em;
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
 *,
 *::after,
 *::before {
@@ -12,6 +26,10 @@ html {
 
 body {
   font-family: "Nanum Gothic", "Montserrat", sans-serif;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .nav {
@@ -53,6 +71,17 @@ body {
 .nav__item:hover {
   color: #FFFFFF;
 }
+.nav__translate {
+  display: inline-block;
+  text-decoration: none;
+}
+
+#particles-js {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/header-mobile.jpg");
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
 
 .header {
   position: relative;
@@ -87,10 +116,56 @@ body {
   opacity: 1;
 }
 
-#particles-js {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bg2.jpg");
+.about {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/about-big.jpg");
+  background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about__box {
+  max-width: 1000px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-left: 1px solid yellow;
+  padding: 6vmin 6vmin 10vmin !important;
+  line-height: 1.7;
+}
+.about__img {
+  float: left;
+  height: 100px;
+  width: 100px;
+  margin: 1.5em;
+  border-radius: 50%;
+  border-style: none;
+}
+.about__text {
+  margin: 0;
+  word-spacing: 1px;
+  display: flex;
+  color: #b5b3b3;
+  font-size: 2rem;
+}
+.about__text p {
+  line-height: 40px;
+}
+.about__media {
+  float: right;
+  margin-top: 2em;
+}
+.about__media a {
+  text-decoration: none;
+  color: #b5b3b3;
+  padding: 0.5em;
+  font-size: 3rem;
+  transition: color 0.3s;
+}
+.about__media a:hover {
+  color: #FFFFFF;
 }
 
 @media (min-width: 628px) {
@@ -101,6 +176,9 @@ body {
 @media (min-width: 992px) {
   .nav {
     padding: 2em 6em;
+  }
+  #particles-js {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/header-desctop.jpg");
   }
 }
 @media (min-width: 1200px) {

@@ -1,4 +1,5 @@
 @import './colors';
+@import './components';
 
 *,
 *::after,
@@ -14,6 +15,10 @@ html {
 
 body {
 	font-family: 'Nanum Gothic', 'Montserrat', sans-serif;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 //-----------------------
@@ -62,6 +67,18 @@ body {
 			color: $main-color;
 		}
 	}
+
+	&__translate {
+		display: inline-block;
+		text-decoration: none;
+	}
+}
+
+#particles-js {
+	background-image: $linear, url('../img/header-mobile.jpg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
 }
 
 //-----------------------
@@ -82,37 +99,92 @@ body {
 		font-size: calc(18vmin + 8 * (100vw - 400px) / 400);
 		text-transform: uppercase;
 		color: $main-color;
-		transition: opacity .2s;
+		transition: opacity 0.2s;
 
-		&--first{
+		&--first {
 			z-index: 200;
 		}
 
-		&--second{
+		&--second {
 			opacity: 0;
 			z-index: 100;
 		}
 
-		&-box{
+		&-box {
 			cursor: pointer;
 
-			&:hover{
-				.header__heading--first{
+			&:hover {
+				.header__heading--first {
 					opacity: 0;
 				}
-				.header__heading--second{
+				.header__heading--second {
 					opacity: 1;
 				}
 			}
 		}
-
 	}
 }
 
-#particles-js {
-	background-image: $linear, url('../img/bg2.jpg');
+//-----------------------
+//ABOUTME
+//-----------------------
+
+.about {
+	position: relative;
+	width: 100%;
+	height: 70vh;
+	background-image: $linear-about, url('../img/about-big.jpg');
+	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__box {
+		max-width: 1000px;
+		background-color: rgba(0, 0, 0, 0.4);
+		border-left: 1px solid yellow;
+		padding: 6vmin 6vmin 10vmin !important;
+		line-height: 1.7;
+	}
+
+	&__img {
+		float: left;
+		height: 100px;
+		width: 100px;
+		margin: 1.5em;
+		border-radius: 50%;
+		border-style: none;
+	}
+	&__text {
+		margin: 0;
+		word-spacing: 1px;
+		display: flex;
+		color: $item-color;
+		font-size: 2rem;
+		
+		p {
+			line-height: 40px;
+		}
+	}
+
+	&__media {
+		float: right;
+		margin-top: 2em;
+
+		a {
+			text-decoration: none;
+			color: $item-color;
+			padding: 0.5em;
+			font-size: 3rem;
+			transition: color 0.3s;
+
+			&:hover {
+				color: $main-color;
+			}
+		}
+	}
 }
 
 @media (min-width: 628px) {
@@ -133,6 +205,10 @@ body {
 	//-----------------------
 	.nav {
 		padding: 2em 6em;
+	}
+
+	#particles-js {
+		background-image: $linear, url('../img/header-desctop.jpg');
 	}
 }
 
