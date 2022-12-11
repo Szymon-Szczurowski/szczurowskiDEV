@@ -20,7 +20,6 @@ body {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	
 }
 
 //-----------------------
@@ -149,13 +148,14 @@ body {
 	position: relative;
 	width: 100%;
 	height: 100%;
-	background-image: $linear-about, url('../img/about-big.jpg');
+	background-image: $linear-about, url('../img/forest-4945407_1920.jpg');
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
 	display: flex;
 	justify-content: center;
 	align-items: center;
+
 
 	&__heading {
 		display: flex;
@@ -172,6 +172,7 @@ body {
 		padding: 6vmin 6vmin 6vmin !important;
 		line-height: 1.4;
 		overflow: hidden;
+		border-radius: 5px;
 	}
 
 	&__img {
@@ -227,7 +228,7 @@ body {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background-image: $linear, url('../img/forest-4945407_1920.jpg');
+	background-image: $linear, url('../img/about-big.jpg');
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
@@ -261,7 +262,6 @@ body {
 			display: flex;
 			flex-direction: column;
 			align-items: center;
-			
 
 			input {
 				margin: 10px 0;
@@ -275,6 +275,7 @@ body {
 				width: 250px;
 				max-width: 250px;
 				max-height: 250px;
+				min-width: 250px;
 				font-size: 16px;
 			}
 
@@ -294,13 +295,11 @@ body {
 	}
 }
 
-
 //-----------------------
 //FOOTER
 //-----------------------
 
-
-.footer{
+.footer {
 	height: 35vh;
 	background-color: $dark;
 	display: flex;
@@ -310,23 +309,26 @@ body {
 	color: $main-color;
 	padding: 0 3em;
 
-	&__text{
+	&__text {
 		font-size: 1.8rem;
 		color: $main-color;
 	}
-	&__name{
+	&__name {
 		text-decoration: none;
 		color: $main-color;
 		cursor: pointer;
+		transition: color 0.3s;
+		&:hover {
+			color: $item-color;
+		}
 	}
 
-
-	hr{
+	hr {
 		margin: 2em 0;
 		width: 100%;
 	}
 
-	&__media{
+	&__media {
 		a {
 			text-decoration: none;
 			color: $item-color;
@@ -354,30 +356,26 @@ body {
 	}
 
 	//-----------------------
-//FOOTER
-//-----------------------
+	//FOOTER
+	//-----------------------
 
+	.footer {
+		height: 30vh;
 
-.footer{
-	height: 30vh;
+		&__text {
+			font-size: 1.8rem;
+		}
 
-	&__text{
-		font-size: 1.8rem;
-	}
+		hr {
+			width: 70%;
+		}
 
-	hr{
-		width: 70%;
-	}
-
-	&__media{
-		a {
-
-			font-size: 2rem;
-
+		&__media {
+			a {
+				font-size: 2rem;
+			}
 		}
 	}
-}
-
 }
 
 @media (min-width: 768px) {
@@ -394,67 +392,58 @@ body {
 	}
 
 	//-----------------------
-//CONTACT
-//-----------------------
+	//CONTACT
+	//-----------------------
 
-.contact {
+	.contact {
+		height: 100%;
+		&__heading {
+			font-size: 4rem;
+		}
 
-	height: 100%;
-	&__heading {
-		font-size: 4rem;
-	}
+		&__box {
+			padding: 4vw 6vw;
 
-	&__box {
+			form {
+				input {
+					font-size: 20px;
+					width: 300px;
+				}
+				textarea {
+					font-size: 20px;
+					width: 300px;
+					max-width: 300px;
+					min-width: 300px;
+				}
 
-		padding: 4vw 6vw;
-
-		form {
-
-			input {
-				font-size: 20px;
-				width: 300px;
-			}
-			textarea {
-				font-size: 20px;
-				width: 300px;
-				max-width: 300px;
-					
-			}
-
-			button {
-				padding: 1.5em 0;
-
+				button {
+					padding: 1.5em 0;
+				}
 			}
 		}
 	}
-}
 
-//-----------------------
-//FOOTER
-//-----------------------
+	//-----------------------
+	//FOOTER
+	//-----------------------
 
+	.footer {
+		height: 30vh;
 
-.footer{
-	height: 30vh;
-
-	&__text{
-		font-size: 3rem;
-	}
-
-	hr{
-		width: 70%;
-	}
-
-	&__media{
-		a {
-
+		&__text {
 			font-size: 3rem;
+		}
 
+		hr {
+			width: 70%;
+		}
+
+		&__media {
+			a {
+				font-size: 3rem;
+			}
 		}
 	}
-}
-
-
 }
 
 @media (min-width: 992px) {
@@ -474,7 +463,6 @@ body {
 	//-----------------------
 
 	.about {
-		
 		&__text {
 			font-size: 2.4rem;
 		}
@@ -486,50 +474,39 @@ body {
 		}
 	}
 
-		//-----------------------
-//CONTACT
-//-----------------------
+	//-----------------------
+	//CONTACT
+	//-----------------------
 
-.contact {
+	.contact {
+		&__box {
+			form {
+				input {
+					font-size: 20px;
+					width: 500px;
+				}
+				textarea {
+					font-size: 20px;
+					width: 500px;
+					max-width: 500px;
+				}
 
-	&__box {
-
-		form {
-
-			input {
-				font-size: 20px;
-				width: 500px;
-			}
-			textarea {
-				font-size: 20px;
-				width: 500px;
-				max-width: 500px;
-					
-			}
-
-			button {
-				padding: 1.5em 0;
-
+				button {
+					padding: 1.5em 0;
+				}
 			}
 		}
 	}
-}
-
 
 	//-----------------------
-//FOOTER
-//-----------------------
+	//FOOTER
+	//-----------------------
 
-
-.footer{
-
-
-	hr{
-		width: 50%;
+	.footer {
+		hr {
+			width: 50%;
+		}
 	}
-
-	
-}
 }
 
 @media (min-width: 1200px) {
@@ -541,19 +518,15 @@ body {
 		padding: 2em 8em;
 	}
 
-	
 	//-----------------------
-//FOOTER
-//-----------------------
+	//FOOTER
+	//-----------------------
 
+	.footer {
+		height: 25vh;
 
-.footer{
-
-	height: 25vh;
-
-	hr{
-		width: 40%;
+		hr {
+			width: 40%;
+		}
 	}
-
-}
 }

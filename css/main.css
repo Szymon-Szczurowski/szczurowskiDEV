@@ -132,7 +132,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/about-big.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/forest-4945407_1920.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -155,6 +155,7 @@ body {
   padding: 6vmin 6vmin 6vmin !important;
   line-height: 1.4;
   overflow: hidden;
+  border-radius: 5px;
 }
 .about__img {
   margin-right: 0.5em;
@@ -198,7 +199,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/forest-4945407_1920.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/about-big.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -250,6 +251,7 @@ body {
   width: 250px;
   max-width: 250px;
   max-height: 250px;
+  min-width: 250px;
   font-size: 16px;
 }
 .contact__box form button {
@@ -283,6 +285,10 @@ body {
   text-decoration: none;
   color: #FFFFFF;
   cursor: pointer;
+  transition: color 0.3s;
+}
+.footer__name:hover {
+  color: #b5b3b3;
 }
 .footer hr {
   margin: 2em 0;
@@ -343,6 +349,7 @@ body {
     font-size: 20px;
     width: 300px;
     max-width: 300px;
+    min-width: 300px;
   }
   .contact__box form button {
     padding: 1.5em 0;
