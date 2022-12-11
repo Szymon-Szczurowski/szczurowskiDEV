@@ -1,7 +1,7 @@
-
+@import './colors';
 
 .section-padding {
-	padding: 0 4em;
+	padding: 4em 4em;
 }
 
 .section-heading {
@@ -13,3 +13,19 @@
 	text-align: center;
 	letter-spacing: 2px;
 }
+
+// .dark-block {
+// 	position: absolute;
+// 	height: 70px;
+// 	width: 60%;
+// 	background-color: $dark;
+// 	transform: skew(-45deg);
+
+
+// 	&--left {
+// 		top: 0;
+// 		left: -50px;
+// 	}
+// }
+
+// <div class="dark-block dark-block--left"></div>

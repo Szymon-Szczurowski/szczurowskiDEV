@@ -20,6 +20,7 @@ body {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	
 }
 
 //-----------------------
@@ -40,12 +41,12 @@ body {
 
 	&__logo {
 		margin: 1em;
-		
-		a{
+
+		a {
 			display: flex;
 			align-items: center;
-			
-			.material-symbols-outlined{
+
+			.material-symbols-outlined {
 				font-size: 3rem;
 				margin-right: 0.5em;
 			}
@@ -63,6 +64,11 @@ body {
 				color: $item-color;
 			}
 		}
+	}
+
+	&__items {
+		margin-top: 1.5em;
+		text-align: center;
 	}
 
 	&__item {
@@ -84,8 +90,6 @@ body {
 		text-decoration: none;
 	}
 }
-
-
 
 //-----------------------
 //HEADER
@@ -144,7 +148,7 @@ body {
 .about {
 	position: relative;
 	width: 100%;
-	height: 85vh;
+	height: 100%;
 	background-image: $linear-about, url('../img/about-big.jpg');
 	background-attachment: fixed;
 	background-position: center;
@@ -153,8 +157,9 @@ body {
 	justify-content: center;
 	align-items: center;
 
-
-	&__heading{
+	&__heading {
+		display: flex;
+		align-items: center;
 		text-transform: uppercase;
 		color: $main-color;
 		font-size: 5rem;
@@ -164,17 +169,20 @@ body {
 		max-width: 1000px;
 		background-color: rgba(0, 0, 0, 0.4);
 		border-left: 1px solid yellow;
-		padding: 6vmin 6vmin 10vmin !important;
-		line-height: 1.7;
+		padding: 6vmin 6vmin 6vmin !important;
+		line-height: 1.4;
+		overflow: hidden;
 	}
 
 	&__img {
-		float: left;
+		margin-right: 0.5em;
 		height: 140px;
 		width: 140px;
-		margin-right: 3em;
 		border-radius: 50%;
 		border-style: none;
+		-webkit-box-shadow: -1px 0px 64px 16px rgba(66, 68, 90, 1);
+		-moz-box-shadow: -1px 0px 64px 16px rgba(66, 68, 90, 1);
+		box-shadow: -1px 0px 64px 16px rgba(66, 68, 90, 1);
 	}
 	&__text {
 		margin: 0;
@@ -182,7 +190,8 @@ body {
 		display: flex;
 		color: $item-color;
 		font-size: 2rem;
-		
+		padding-left: 1em;
+
 		p {
 			line-height: 40px;
 		}
@@ -206,16 +215,246 @@ body {
 	}
 }
 
-@media (min-width: 628px) {
+//-----------------------
+//CONTACT
+//-----------------------
+
+.contact {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	padding: 10% 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: $linear, url('../img/forest-4945407_1920.jpg');
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+
+	&__input {
+		background-color: $input;
+		color: $main-color;
+		margin-bottom: 2em;
+
+		&::placeholder {
+			padding-left: 0.5em;
+			color: $main-color;
+		}
+	}
+
+	&__heading {
+		color: $main-color;
+		text-transform: uppercase;
+		font-size: 3rem;
+		margin: 1em 0;
+	}
+
+	&__box {
+		border-right: 1px solid yellow;
+		background-color: rgba(0, 0, 0, 0.6);
+		padding: 2vw 4vw;
+		border-radius: 8px;
+		overflow: hidden;
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			
+
+			input {
+				margin: 10px 0;
+				padding: 20px;
+				font-size: 16px;
+				width: 250px;
+			}
+			textarea {
+				margin: 10px 0;
+				padding: 20px;
+				width: 250px;
+				max-width: 250px;
+				max-height: 250px;
+				font-size: 16px;
+			}
+
+			button {
+				margin-top: 1.5em;
+				background: none;
+				color: $main-color;
+				border: 1px solid rgb(85, 85, 22);
+				width: 100%;
+				padding: 1em 0;
+				outline: none;
+				background-color: rgba(243, 243, 0, 0.5);
+				border-radius: 5px;
+				cursor: pointer;
+			}
+		}
+	}
+}
+
+
+//-----------------------
+//FOOTER
+//-----------------------
+
+
+.footer{
+	height: 35vh;
+	background-color: $dark;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	color: $main-color;
+	padding: 0 3em;
+
+	&__text{
+		font-size: 1.8rem;
+		color: $main-color;
+	}
+	&__name{
+		text-decoration: none;
+		color: $main-color;
+		cursor: pointer;
+	}
+
+
+	hr{
+		margin: 2em 0;
+		width: 100%;
+	}
+
+	&__media{
+		a {
+			text-decoration: none;
+			color: $item-color;
+			padding: 0.5em;
+			font-size: 2rem;
+			transition: color 0.3s;
+
+			&:hover {
+				color: $main-color;
+			}
+		}
+	}
+}
+
+@media (min-width: 672px) {
 	//-----------------------
 	//NAV
 	//-----------------------
 	.nav {
 		flex-direction: row;
+
+		&__items {
+			margin-top: 0;
+		}
+	}
+
+	//-----------------------
+//FOOTER
+//-----------------------
+
+
+.footer{
+	height: 30vh;
+
+	&__text{
+		font-size: 1.8rem;
+	}
+
+	hr{
+		width: 70%;
+	}
+
+	&__media{
+		a {
+
+			font-size: 2rem;
+
+		}
 	}
 }
 
+}
+
 @media (min-width: 768px) {
+	//-----------------------
+	//ABOUTME
+	//-----------------------
+
+	.about {
+		height: 100vh;
+
+		&__text {
+			font-size: 3rem;
+		}
+	}
+
+	//-----------------------
+//CONTACT
+//-----------------------
+
+.contact {
+
+	height: 100%;
+	&__heading {
+		font-size: 4rem;
+	}
+
+	&__box {
+
+		padding: 4vw 6vw;
+
+		form {
+
+			input {
+				font-size: 20px;
+				width: 300px;
+			}
+			textarea {
+				font-size: 20px;
+				width: 300px;
+				max-width: 300px;
+					
+			}
+
+			button {
+				padding: 1.5em 0;
+
+			}
+		}
+	}
+}
+
+//-----------------------
+//FOOTER
+//-----------------------
+
+
+.footer{
+	height: 30vh;
+
+	&__text{
+		font-size: 3rem;
+	}
+
+	hr{
+		width: 70%;
+	}
+
+	&__media{
+		a {
+
+			font-size: 3rem;
+
+		}
+	}
+}
+
+
 }
 
 @media (min-width: 992px) {
@@ -230,23 +469,67 @@ body {
 		background-image: $linear, url('../img/header-desctop.jpg');
 	}
 
-		//-----------------------
+	//-----------------------
 	//ABOUUS
 	//-----------------------
 
-	.about{
-		&__text{
+	.about {
+		
+		&__text {
 			font-size: 2.4rem;
 		}
 
-		&__media{
-			a{
+		&__media {
+			a {
 				font-size: 4rem;
 			}
-			
 		}
 	}
 
+		//-----------------------
+//CONTACT
+//-----------------------
+
+.contact {
+
+	&__box {
+
+		form {
+
+			input {
+				font-size: 20px;
+				width: 500px;
+			}
+			textarea {
+				font-size: 20px;
+				width: 500px;
+				max-width: 500px;
+					
+			}
+
+			button {
+				padding: 1.5em 0;
+
+			}
+		}
+	}
+}
+
+
+	//-----------------------
+//FOOTER
+//-----------------------
+
+
+.footer{
+
+
+	hr{
+		width: 50%;
+	}
+
+	
+}
 }
 
 @media (min-width: 1200px) {
@@ -257,4 +540,20 @@ body {
 	.nav {
 		padding: 2em 8em;
 	}
+
+	
+	//-----------------------
+//FOOTER
+//-----------------------
+
+
+.footer{
+
+	height: 25vh;
+
+	hr{
+		width: 40%;
+	}
+
+}
 }

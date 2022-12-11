@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pl">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -34,28 +34,30 @@
         </div>
 
         <div class="nav__items">
-            <a href="#" class="nav__item">home</a>
-            <a href="#" class="nav__item">projects</a>
- 
-
-            
+            <a  onclik="void(0)"  href="#" class="nav__item"">home</a>
+            <a  onclik="void(0)"  href="#contact" class="nav__item"">contact</a>
+            <a  onclik="void(0)"  href="#" class="nav__item"">projects</a>
         </div>
     </nav>
     
 
 
-    <header class="header" id="particles-js">
+    <header class="header" id="particles-js" id="home">
+
+
         <div class="header__heading-box">
         <h1 class="header__heading header__heading--first">i&nbsp;can</h1>
         <h1 class="header__heading header__heading--second">you&nbsp;can</h1>
     </div>
     </header>
+<main>
 
-    <section class="about section-padding">
+
+    <section class="about section-padding" id="about">
         <div class="wrapper">
-        <h2 class="about__heading ">about me</h2>
+        <h2 class="about__heading "><img class="about__img" src="./img/face.jpg"  alt=""><span>about me</span></h2>
         <div class="about__box">
-            <img class="about__img" src="./img/face.jpg"  alt="">
+            
             <p class="about__text">My name is Szymon Szczurowski. I am 22 years old. I am currently a student at the Polish-Japanese Academy of Computer Technology in Gdansk at the Faculty of Computer Science. I started my adventure with computer science and especially with front-end in Junior High School. For this reason, my choice in the educational path was the IT technical school in which I obtained the title of IT technician. All the time I try to expand my knowledge with new information that improves my efficiency. On my site under projects you will find some of my projects on which I practice my skills. I invite you to familiarize yourself with them and possible feed-back.            </p>
             <div class="about__media">
                 <a href=""><i class="fa-brands fa-instagram"></i></a>
@@ -68,10 +70,55 @@
     </div>
     </section>
 
+    <section class="contact section-padding" id="contact">
+            <div class="contact__box">
 
+                <h2 class="contact__heading">contact</h2>
+
+                <form action="" method="POST">
+
+                    <input class="contact__input" type="text" name="Name" placeholder="Full name" required>
+
+                    <input class="contact__input" type="email" name="Email" placeholder="Email" required>
+            
+
+                    <textarea class="contact__input" name="Message" placeholder="Message"></textarea>
+
+                    <button type="submit">Send</button>
+                </form>
+
+
+            </div>
+    </section>
+
+
+</main>
+
+<footer class="footer" id="footer">
+
+    <div class="footer__box footer__box-first">
+
+        <p class="footer__text"> &copy; <span class="footer__year"> </span> <a class="footer__name"  href="#">Szymon Szczurowski</a></p>
+
+    </div>
+
+    <hr>
+    
+
+    <div class="footer__box footer__box-second">
+
+        <div class="footer__media">
+            <a href=""><i class="fa-brands fa-instagram"></i></a>
+            <a href=""><i class="fa-brands fa-facebook"></i></a>
+            <a href=""><i class="fa-brands fa-github"></i></a>
+            <a href=""><i class="fa-brands fa-linkedin"></i></a>
+        </div>
+    </div>
+</footer>
 
     <script src="./js/particles.js"></script>
     <script src="./js/app.js"></script>
+    <script src="./js/main.js"></script>
     
 </body>
 </html>
