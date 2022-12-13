@@ -6,6 +6,6 @@ const handleCurrentYear = () => {
     footerYear.innerText = year;
 }
 
+
 handleCurrentYear();
 
-// particlesJS();

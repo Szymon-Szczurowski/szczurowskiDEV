@@ -1,5 +1,6 @@
 @import './colors';
 @import './components';
+@import './animations';
 
 *,
 *::after,
@@ -8,6 +9,13 @@
 	padding: 0;
 	margin: 0;
 }
+
+
+
+
+
+
+
 
 html {
 	font-size: 62.5%;
@@ -20,7 +28,45 @@ body {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
+	background-color: $dark;
+
+
 }
+
+
+.goog-te-gadget .goog-te-combo{
+	background-color: rgba(0, 0, 0, 0.4);
+	color: white;
+	padding: 0.5em;
+	margin: 0;
+	width: 150px;
+	border-radius: 8px;
+
+}
+
+.goog-te-gadget{
+	color: transparent !important;
+}
+
+.translate{
+	position: fixed !important;	// position: absolute !important;
+	bottom: 0  !important;
+	right: 20px  !important;
+	z-index: 1000!important;
+
+	&__element{
+		position: absolute;
+		top: 0;
+		color: aliceblue;
+		z-index: 1;
+
+	}
+	
+}
+.goog-logo-link, .goog-logo-link:link, .goog-logo-link:visited, .goog-logo-link:hover, .goog-logo-link:active{
+	display: none;
+}
+
 
 //-----------------------
 //NAV
@@ -97,7 +143,17 @@ body {
 .header {
 	position: relative;
 	width: 100%;
-	height: 100vh;
+	height: 90vh;
+
+	&__item{
+		position: absolute;
+		color: $main-color;
+		bottom: 4em;
+		left: 50%;
+		font-size: 3rem;
+		
+	
+	}
 
 	&__heading {
 		display: block;
@@ -168,7 +224,7 @@ body {
 	&__box {
 		max-width: 1000px;
 		background-color: rgba(0, 0, 0, 0.4);
-		border-left: 1px solid yellow;
+		border-left: 1px solid royalblue;
 		padding: 6vmin 6vmin 6vmin !important;
 		line-height: 1.4;
 		overflow: hidden;
@@ -252,7 +308,7 @@ body {
 	}
 
 	&__box {
-		border-right: 1px solid yellow;
+		border-right: 1px solid royalblue;
 		background-color: rgba(0, 0, 0, 0.6);
 		padding: 2vw 4vw;
 		border-radius: 8px;
@@ -277,19 +333,26 @@ body {
 				max-height: 250px;
 				min-width: 250px;
 				font-size: 16px;
+				font-family: 'Nanum Gothic', 'Montserrat', sans-serif;
+				font-weight: 500;
 			}
 
 			button {
 				margin-top: 1.5em;
 				background: none;
 				color: $main-color;
-				border: 1px solid rgb(85, 85, 22);
+				border: 1px solid $blue;
 				width: 100%;
 				padding: 1em 0;
 				outline: none;
-				background-color: rgba(243, 243, 0, 0.5);
+				background-color: $blue;
 				border-radius: 5px;
 				cursor: pointer;
+				transition: background-color .3s ;
+
+				&:hover{
+					background-color: royalblue;
+				}
 			}
 		}
 	}
@@ -384,7 +447,6 @@ body {
 	//-----------------------
 
 	.about {
-		height: 100vh;
 
 		&__text {
 			font-size: 3rem;
@@ -463,6 +525,7 @@ body {
 	//-----------------------
 
 	.about {
+		height: 100vh;
 		&__text {
 			font-size: 2.4rem;
 		}
@@ -489,6 +552,7 @@ body {
 					font-size: 20px;
 					width: 500px;
 					max-width: 500px;
+					min-width: 500px;
 				}
 
 				button {
