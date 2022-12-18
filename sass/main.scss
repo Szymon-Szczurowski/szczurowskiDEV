@@ -17,7 +17,6 @@ html {
 
 body {
 	font-family: 'Nanum Gothic', 'Montserrat', sans-serif;
-
 	-webkit-user-select: none;
 	-moz-user-select: none;
 	-ms-user-select: none;
@@ -26,12 +25,17 @@ body {
 }
 
 .goog-te-gadget .goog-te-combo {
-	background-color: rgba(0, 0, 0, 0.4);
-	color: white;
-	padding: 0.5em;
 	margin: 0;
+	padding: 0.5em;
 	width: 150px;
+	color: $main-color;
+
+	background-color: rgba(0, 0, 0, 0.4);
 	border-radius: 8px;
+
+	option{
+		max-height: 10px;
+	}
 }
 
 .goog-te-gadget {
@@ -42,13 +46,13 @@ body {
 	position: fixed !important; // position: absolute !important;
 	bottom: 0 !important;
 	right: 0 !important;
-	margin-right: 7em;
+	margin-right: 3em;
 	z-index: 1000 !important;
 
 	&__element {
 		position: absolute;
 		top: 0;
-		color: aliceblue;
+		color: $main-color;
 		z-index: 1;
 	}
 }
@@ -76,37 +80,12 @@ body {
 	background-color: $dark;
 	z-index: 1000;
 
-
 	&__logo {
-
 		img {
 			width: 200px;
 			height: 60px;
 		}
 	}
-	// a {
-	// 	display: flex;
-	// 	align-items: center;
-
-	// 	.material-symbols-outlined {
-	// 		font-size: 4rem;
-	// 		margin-right: 0.5em;
-
-	// 	}
-	// }
-
-	// &-item {
-	// 	text-decoration: none;
-	// 	text-transform: uppercase;
-	// 	font-size: 2rem;
-	// 	color: $main-color;
-	// 	font-weight: 800;
-	// 	transition: color 0.3s;
-
-	// 	&:hover {
-	// 		color: $item-color;
-	// 	}
-	// }
 
 	&__items {
 		margin-top: 2em;
@@ -152,16 +131,16 @@ body {
 	}
 
 	&__heading {
-		display: block;
 		position: absolute;
+		display: block;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		padding: 0.5em 1em;
 		font-size: calc(16vmin + 8 * (100vw - 400px) / 400);
 		text-transform: uppercase;
 		color: $main-color;
 		transition: opacity 0.2s;
-		padding: 0.5em 1em;
 
 		&--first {
 			z-index: 200;
@@ -199,51 +178,51 @@ body {
 
 .about {
 	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	height: 100%;
 	background-image: $linear-about, url('../img/about.jpg');
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
-	display: flex;
-	justify-content: center;
-	align-items: center;
 
 	&__heading {
 		display: flex;
 		align-items: center;
+		margin-bottom: 1em;
+		font-size: 5rem;
 		text-transform: uppercase;
 		color: $main-color;
-		font-size: 5rem;
-		margin-bottom: 1em;
 	}
 	&__box {
 		max-width: 1000px;
-		background-color: rgba(0, 0, 0, 0.4);
-		border-left: 3px solid royalblue;
 		padding: 6vmin 6vmin 6vmin !important;
 		line-height: 1.4;
-		overflow: hidden;
+		background-color: rgba(0, 0, 0, 0.4);
+		border-left: 3px solid royalblue;
 		border-radius: 5px;
+		overflow: hidden;
 	}
 
 	&__img {
 		margin-right: 0.5em;
 		height: 140px;
 		width: 140px;
-		border-radius: 30%;
-		border-style: none;
 		-webkit-box-shadow: -1px 0px 34px 16px rgba(66, 68, 90, 1);
 		-moz-box-shadow: -1px 0px 34px 16px rgba(66, 68, 90, 1);
 		box-shadow: -1px 0px 34px 16px rgba(66, 68, 90, 1);
+		border-radius: 30%;
+		border-style: none;
 	}
 	&__text {
-		margin: 0;
-		word-spacing: 1px;
 		display: flex;
-		color: $item-color;
-		font-size: 2rem;
+		margin: 0;
 		padding-left: 1em;
+		font-size: 2rem;
+		word-spacing: 1px;
+		color: $item-color;
 
 		p {
 			line-height: 40px;
@@ -251,14 +230,14 @@ body {
 	}
 
 	&__media {
-		float: right;
 		margin-top: 2em;
+		float: right;
 
 		a {
-			text-decoration: none;
-			color: $item-color;
 			padding: 0.5em;
 			font-size: 3rem;
+			text-decoration: none;
+			color: $item-color;
 			transition: color 0.3s;
 
 			&:hover {
@@ -274,21 +253,21 @@ body {
 
 .contact {
 	position: relative;
-	height: 100%;
-	width: 100%;
-	padding: 10% 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	padding: 10% 0;
+	height: 100%;
+	width: 100%;
 	background-image: $linear, url('../img/contact.jpg');
 	background-attachment: fixed;
 	background-position: center;
 	background-size: cover;
 
 	&__input {
-		background-color: $input;
-		color: $main-color;
 		margin-bottom: 2em;
+		color: $main-color;
+		background-color: $input;
 
 		&::placeholder {
 			padding-left: 0.5em;
@@ -297,17 +276,17 @@ body {
 	}
 
 	&__heading {
-		color: $main-color;
-		text-transform: uppercase;
-		font-size: 3rem;
 		margin: 1em 0;
+		font-size: 3rem;
+		text-transform: uppercase;
+		color: $main-color;
 	}
 
 	&__box {
-		border-right: 3px solid royalblue;
-		background-color: rgba(0, 0, 0, 0.6);
 		padding: 2vw 4vw;
+		background-color: rgba(0, 0, 0, 0.6);
 		border-radius: 8px;
+		border-right: 3px solid royalblue;
 		overflow: hidden;
 
 		form {
@@ -318,8 +297,8 @@ body {
 			input {
 				margin: 10px 0;
 				padding: 20px;
-				font-size: 16px;
 				width: 250px;
+				font-size: 16px;
 			}
 			textarea {
 				margin: 10px 0;
@@ -329,22 +308,22 @@ body {
 				max-height: 250px;
 				min-width: 250px;
 				font-size: 16px;
-				font-family: 'Nanum Gothic', 'Montserrat', sans-serif;
 				font-weight: 500;
+				font-family: 'Nanum Gothic', 'Montserrat', sans-serif;
 			}
 
 			button {
 				margin-top: 1.5em;
-				background: none;
-				color: $main-color;
-				border: 1px solid $blue;
-				width: 100%;
 				padding: 1em 0;
-				outline: none;
+				width: 100%;
+				color: $main-color;
+				background: none;
 				background-color: $blue;
+				outline: none;
 				border-radius: 5px;
-				cursor: pointer;
+				border: 1px solid $blue;
 				transition: background-color 0.3s;
+				cursor: pointer;
 
 				&:hover {
 					background-color: royalblue;
@@ -359,16 +338,15 @@ body {
 //-----------------------
 
 .footer {
-	height: 35vh;
-	background-color: $dark;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	color: $main-color;
 	padding: 0 3em;
+	height: 35vh;
+	color: $main-color;
+	background-color: $dark;
 	border-top: 3px solid $blue;
-
 
 	&__text {
 		font-size: 1.8rem;
@@ -377,8 +355,8 @@ body {
 	&__name {
 		text-decoration: none;
 		color: $main-color;
-		cursor: pointer;
 		transition: color 0.3s;
+		cursor: pointer;
 		&:hover {
 			color: $item-color;
 		}
@@ -391,10 +369,10 @@ body {
 
 	&__media {
 		a {
-			text-decoration: none;
-			color: $item-color;
 			padding: 0.5em;
 			font-size: 2rem;
+			text-decoration: none;
+			color: $item-color;
 			transition: color 0.3s;
 
 			&:hover {

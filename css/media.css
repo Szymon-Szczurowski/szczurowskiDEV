@@ -51,10 +51,10 @@
     width: 300px;
   }
   .contact__box form textarea {
-    font-size: 20px;
     width: 300px;
     max-width: 300px;
     min-width: 300px;
+    font-size: 20px;
   }
   .contact__box form button {
     padding: 1.5em 0;

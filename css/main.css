@@ -13,11 +13,11 @@
 }
 
 #preloader {
-  background: #000 url(../img/circle-loader-gif-2.gif) no-repeat center center;
-  background-size: 15%;
+  position: fixed;
   height: 100vh;
   width: 100%;
-  position: fixed;
+  background: #000 url("../img/circle-loader-gif-2.gif") no-repeat center center;
+  background-size: 15%;
   z-index: 100000;
 }
 
@@ -144,12 +144,15 @@ body {
 }
 
 .goog-te-gadget .goog-te-combo {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: white;
-  padding: 0.5em;
   margin: 0;
+  padding: 0.5em;
   width: 150px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
+}
+.goog-te-gadget .goog-te-combo option {
+  max-height: 10px;
 }
 
 .goog-te-gadget {
@@ -160,13 +163,13 @@ body {
   position: fixed !important;
   bottom: 0 !important;
   right: 0 !important;
-  margin-right: 7em;
+  margin-right: 3em;
   z-index: 1000 !important;
 }
 .translate__element {
   position: absolute;
   top: 0;
-  color: aliceblue;
+  color: white;
   z-index: 1;
 }
 
@@ -229,16 +232,16 @@ body {
   display: none;
 }
 .header__heading {
-  display: block;
   position: absolute;
+  display: block;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 0.5em 1em;
   font-size: calc(16vmin + 8 * (100vw - 400px) / 400);
   text-transform: uppercase;
   color: white;
   transition: opacity 0.2s;
-  padding: 0.5em 1em;
 }
 .header__heading--first {
   z-index: 200;
@@ -265,61 +268,61 @@ body {
 
 .about {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("../img/about.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .about__heading {
   display: flex;
   align-items: center;
+  margin-bottom: 1em;
+  font-size: 5rem;
   text-transform: uppercase;
   color: white;
-  font-size: 5rem;
-  margin-bottom: 1em;
 }
 .about__box {
   max-width: 1000px;
-  background-color: rgba(0, 0, 0, 0.4);
-  border-left: 3px solid royalblue;
   padding: 6vmin 6vmin 6vmin !important;
   line-height: 1.4;
-  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-left: 3px solid royalblue;
   border-radius: 5px;
+  overflow: hidden;
 }
 .about__img {
   margin-right: 0.5em;
   height: 140px;
   width: 140px;
+  box-shadow: -1px 0px 34px 16px rgb(66, 68, 90);
   border-radius: 30%;
   border-style: none;
-  box-shadow: -1px 0px 34px 16px rgb(66, 68, 90);
 }
 .about__text {
-  margin: 0;
-  word-spacing: 1px;
   display: flex;
-  color: #cccbcb;
-  font-size: 2rem;
+  margin: 0;
   padding-left: 1em;
+  font-size: 2rem;
+  word-spacing: 1px;
+  color: #cccbcb;
 }
 .about__text p {
   line-height: 40px;
 }
 .about__media {
-  float: right;
   margin-top: 2em;
+  float: right;
 }
 .about__media a {
-  text-decoration: none;
-  color: #cccbcb;
   padding: 0.5em;
   font-size: 3rem;
+  text-decoration: none;
+  color: #cccbcb;
   transition: color 0.3s;
 }
 .about__media a:hover {
@@ -328,21 +331,21 @@ body {
 
 .contact {
   position: relative;
-  height: 100%;
-  width: 100%;
-  padding: 10% 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 10% 0;
+  height: 100%;
+  width: 100%;
   background-image: linear-gradient(rgba(0, 0, 0, 0.363), rgba(0, 0, 0, 0.658)), url("../img/contact.jpg");
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
 }
 .contact__input {
-  background-color: rgb(59, 59, 59);
-  color: white;
   margin-bottom: 2em;
+  color: white;
+  background-color: rgb(59, 59, 59);
 }
 .contact__input::-moz-placeholder {
   padding-left: 0.5em;
@@ -357,16 +360,16 @@ body {
   color: white;
 }
 .contact__heading {
-  color: white;
-  text-transform: uppercase;
-  font-size: 3rem;
   margin: 1em 0;
+  font-size: 3rem;
+  text-transform: uppercase;
+  color: white;
 }
 .contact__box {
-  border-right: 3px solid royalblue;
-  background-color: rgba(0, 0, 0, 0.6);
   padding: 2vw 4vw;
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 8px;
+  border-right: 3px solid royalblue;
   overflow: hidden;
 }
 .contact__box form {
@@ -377,8 +380,8 @@ body {
 .contact__box form input {
   margin: 10px 0;
   padding: 20px;
-  font-size: 16px;
   width: 250px;
+  font-size: 16px;
 }
 .contact__box form textarea {
   margin: 10px 0;
@@ -388,35 +391,35 @@ body {
   max-height: 250px;
   min-width: 250px;
   font-size: 16px;
-  font-family: "Nanum Gothic", "Montserrat", sans-serif;
   font-weight: 500;
+  font-family: "Nanum Gothic", "Montserrat", sans-serif;
 }
 .contact__box form button {
   margin-top: 1.5em;
-  background: none;
-  color: white;
-  border: 1px solid rgba(65, 105, 225, 0.877);
-  width: 100%;
   padding: 1em 0;
-  outline: none;
+  width: 100%;
+  color: white;
+  background: none;
   background-color: rgba(65, 105, 225, 0.877);
+  outline: none;
   border-radius: 5px;
-  cursor: pointer;
+  border: 1px solid rgba(65, 105, 225, 0.877);
   transition: background-color 0.3s;
+  cursor: pointer;
 }
 .contact__box form button:hover {
   background-color: royalblue;
 }
 
 .footer {
-  height: 35vh;
-  background-color: rgba(24, 24, 24, 0.9725490196);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: white;
   padding: 0 3em;
+  height: 35vh;
+  color: white;
+  background-color: rgba(24, 24, 24, 0.9725490196);
   border-top: 3px solid rgba(65, 105, 225, 0.877);
 }
 .footer__text {
@@ -426,8 +429,8 @@ body {
 .footer__name {
   text-decoration: none;
   color: white;
-  cursor: pointer;
   transition: color 0.3s;
+  cursor: pointer;
 }
 .footer__name:hover {
   color: #cccbcb;
@@ -437,10 +440,10 @@ body {
   width: 100%;
 }
 .footer__media a {
-  text-decoration: none;
-  color: #cccbcb;
   padding: 0.5em;
   font-size: 2rem;
+  text-decoration: none;
+  color: #cccbcb;
   transition: color 0.3s;
 }
 .footer__media a:hover {

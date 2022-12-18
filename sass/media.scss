@@ -83,6 +83,7 @@
 
 	.contact {
 		height: 100%;
+
 		&__heading {
 			font-size: 4rem;
 		}
@@ -96,10 +97,10 @@
 					width: 300px;
 				}
 				textarea {
-					font-size: 20px;
 					width: 300px;
 					max-width: 300px;
 					min-width: 300px;
+					font-size: 20px;
 				}
 
 				button {
@@ -139,7 +140,7 @@
 	.nav {
 		padding: 2em 6em;
 
-		&__item{
+		&__item {
 			font-size: 2.2rem;
 			margin-left: 1em;
 
@@ -148,9 +149,9 @@
 			&::before {
 				transition: transform 0.3s;
 			}
-	
+
 			&::after,
-			&::before{
+			&::before {
 				content: '';
 				position: absolute;
 				width: 0;
@@ -158,23 +159,23 @@
 				opacity: 0;
 				transition: 0.3s;
 			}
-	
-			&::after{
+
+			&::after {
 				top: -2px;
 				left: -8px;
 				border-top: 3px solid #fff;
 				border-left: 3px solid #fff;
 			}
-	
-			&::before{
+
+			&::before {
 				bottom: -2px;
 				right: -8px;
 				border-bottom: 3px solid #fff;
 				border-right: 3px solid #fff;
 			}
-	
+
 			&:hover::after,
-			&:hover::before{
+			&:hover::before {
 				width: 50px;
 				height: 50%;
 				opacity: 1;
