@@ -199,7 +199,7 @@ body {
   height: 60px;
 }
 .nav__items {
-  margin-top: 2em;
+  margin-top: 1.8em;
   text-align: center;
 }
 .nav__item {
@@ -226,7 +226,7 @@ body {
 .header {
   position: relative;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
 }
 .header__item {
   display: none;
@@ -267,6 +267,7 @@ body {
 }
 
 .about {
+  padding-top: 18em;
   position: relative;
   display: flex;
   justify-content: center;
@@ -282,14 +283,14 @@ body {
   display: flex;
   align-items: center;
   margin-bottom: 1em;
-  font-size: 5rem;
+  font-size: 3rem;
   text-transform: uppercase;
   color: white;
 }
 .about__box {
   max-width: 1000px;
   padding: 6vmin 6vmin 6vmin !important;
-  line-height: 1.4;
+  line-height: 1.6;
   background-color: rgba(0, 0, 0, 0.4);
   border-left: 3px solid royalblue;
   border-radius: 5px;
@@ -297,8 +298,8 @@ body {
 }
 .about__img {
   margin-right: 0.5em;
-  height: 140px;
-  width: 140px;
+  height: 100px;
+  width: 100px;
   box-shadow: -1px 0px 34px 16px rgb(66, 68, 90);
   border-radius: 30%;
   border-style: none;
@@ -307,7 +308,7 @@ body {
   display: flex;
   margin: 0;
   padding-left: 1em;
-  font-size: 2rem;
+  font-size: 1.6rem;
   word-spacing: 1px;
   color: #cccbcb;
 }
@@ -315,7 +316,7 @@ body {
   line-height: 40px;
 }
 .about__media {
-  margin-top: 2em;
+  margin-top: 1.6em;
   float: right;
 }
 .about__media a {
@@ -361,7 +362,7 @@ body {
 }
 .contact__heading {
   margin: 1em 0;
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   color: white;
 }
@@ -381,7 +382,8 @@ body {
   margin: 10px 0;
   padding: 20px;
   width: 250px;
-  font-size: 16px;
+  font-size: 1.6rem;
+  border: none;
 }
 .contact__box form textarea {
   margin: 10px 0;
@@ -390,8 +392,9 @@ body {
   max-width: 250px;
   max-height: 250px;
   min-width: 250px;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 500;
+  border: none;
   font-family: "Nanum Gothic", "Montserrat", sans-serif;
 }
 .contact__box form button {
@@ -416,8 +419,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 0 3em;
-  height: 35vh;
+  padding: 5em 3em;
   color: white;
   background-color: rgba(24, 24, 24, 0.9725490196);
   border-top: 3px solid rgba(65, 105, 225, 0.877);

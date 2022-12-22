@@ -35,7 +35,7 @@
 	//-----------------------
 
 	.footer {
-		height: 30vh;
+
 
 		&__text {
 			font-size: 1.8rem;
@@ -54,18 +54,6 @@
 }
 
 @media (min-width: 768px) {
-	//-----------------------
-	//NAV
-	//-----------------------
-
-	.nav {
-		&__logo {
-			img {
-				width: 250px;
-				height: 70px;
-			}
-		}
-	}
 
 	//-----------------------
 	//ABOUTME
@@ -73,7 +61,7 @@
 
 	.about {
 		&__text {
-			font-size: 3rem;
+			font-size: 1.6rem;
 		}
 	}
 
@@ -84,23 +72,19 @@
 	.contact {
 		height: 100%;
 
-		&__heading {
-			font-size: 4rem;
-		}
 
 		&__box {
 			padding: 4vw 6vw;
 
 			form {
 				input {
-					font-size: 20px;
 					width: 300px;
 				}
 				textarea {
 					width: 300px;
 					max-width: 300px;
 					min-width: 300px;
-					font-size: 20px;
+	
 				}
 
 				button {
@@ -115,10 +99,9 @@
 	//-----------------------
 
 	.footer {
-		height: 30vh;
 
 		&__text {
-			font-size: 3rem;
+			font-size: 2rem;
 		}
 
 		hr {
@@ -127,7 +110,7 @@
 
 		&__media {
 			a {
-				font-size: 3rem;
+				font-size: 2rem;
 			}
 		}
 	}
@@ -141,7 +124,7 @@
 		padding: 2em 6em;
 
 		&__item {
-			font-size: 2.2rem;
+
 			margin-left: 1em;
 
 			&,
@@ -208,16 +191,13 @@
 	//-----------------------
 
 	.about {
+		padding-top: 0;
 		height: 100vh;
-		&__text {
-			font-size: 2.4rem;
+
+		&__text{
+			line-height: 3rem;
 		}
 
-		&__media {
-			a {
-				font-size: 4rem;
-			}
-		}
 	}
 
 	//-----------------------
@@ -228,11 +208,11 @@
 		&__box {
 			form {
 				input {
-					font-size: 20px;
+					font-size: 15px;
 					width: 500px;
 				}
 				textarea {
-					font-size: 20px;
+					font-size: 15px;
 					width: 500px;
 					max-width: 500px;
 					min-width: 500px;
@@ -270,7 +250,7 @@
 	//-----------------------
 
 	.footer {
-		height: 25vh;
+	
 
 		hr {
 			width: 40%;

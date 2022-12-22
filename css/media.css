@@ -16,9 +16,6 @@
   .nav__item-first {
     display: inline-block;
   }
-  .footer {
-    height: 30vh;
-  }
   .footer__text {
     font-size: 1.8rem;
   }
@@ -30,46 +27,34 @@
   }
 }
 @media (min-width: 768px) {
-  .nav__logo img {
-    width: 250px;
-    height: 70px;
-  }
   .about__text {
-    font-size: 3rem;
+    font-size: 1.6rem;
   }
   .contact {
     height: 100%;
-  }
-  .contact__heading {
-    font-size: 4rem;
   }
   .contact__box {
     padding: 4vw 6vw;
   }
   .contact__box form input {
-    font-size: 20px;
     width: 300px;
   }
   .contact__box form textarea {
     width: 300px;
     max-width: 300px;
     min-width: 300px;
-    font-size: 20px;
   }
   .contact__box form button {
     padding: 1.5em 0;
   }
-  .footer {
-    height: 30vh;
-  }
   .footer__text {
-    font-size: 3rem;
+    font-size: 2rem;
   }
   .footer hr {
     width: 70%;
   }
   .footer__media a {
-    font-size: 3rem;
+    font-size: 2rem;
   }
 }
 @media (min-width: 992px) {
@@ -77,7 +62,6 @@
     padding: 2em 6em;
   }
   .nav__item {
-    font-size: 2.2rem;
     margin-left: 1em;
   }
   .nav__item, .nav__item::after, .nav__item::before {
@@ -121,20 +105,18 @@
     padding: 2em 0;
   }
   .about {
+    padding-top: 0;
     height: 100vh;
   }
   .about__text {
-    font-size: 2.4rem;
-  }
-  .about__media a {
-    font-size: 4rem;
+    line-height: 3rem;
   }
   .contact__box form input {
-    font-size: 20px;
+    font-size: 15px;
     width: 500px;
   }
   .contact__box form textarea {
-    font-size: 20px;
+    font-size: 15px;
     width: 500px;
     max-width: 500px;
     min-width: 500px;
@@ -149,9 +131,6 @@
 @media (min-width: 1200px) {
   .nav {
     padding: 2em 8em;
-  }
-  .footer {
-    height: 25vh;
   }
   .footer hr {
     width: 40%;
