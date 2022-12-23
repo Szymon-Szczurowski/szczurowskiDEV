@@ -25,6 +25,7 @@
     <div class="translate" id="google_translate_element"></div>
 
                 <nav class="nav">
+
                     <div class="nav__logo">
                         <a href="#" class="nav__logo-item">
                          <img src="./img/logo.png" alt="">
@@ -32,12 +33,36 @@
                     </div>
 
                     <div class="nav__items">
-                        <a onclik="void(0)" href="#" class="nav__item nav__item-first"">home</a>
+
+                        <a onclik="void(0)" href="#" class="nav__item"">home</a>
                         <a  onclik=" void(0)" href="#about" class="nav__item"">about me</a>
                         <a  onclik=" void(0)" href="#contact" class="nav__item"">contact</a>
                         <a  onclik=" void(0)" href="#" class="nav__item"">projects</a>   
+
+                        <div class="nav__burger">
+                            <div class="nav__burger-box">
+                                <div class="nav__burger-line"></div>
+                            </div>
+                        </div>
+    
                     </div>
+
+                    <div class="nav__menu">
+                        <hr>
+                        <a onclik="void(0)" href="#" class="nav__menu-item"">home</a>
+                        <hr>
+                        <a  onclik=" void(0)" href="#about" class="nav__menu-item"">about me</a>
+                        <hr>
+                        <a  onclik=" void(0)" href="#contact" class="nav__menu-item"">contact</a>
+                        <hr>
+                        <a  onclik=" void(0)" href="#" class="nav__menu-item"">projects</a>
+                        <hr>   
+                    </div>
+
                 </nav>
+
+           
+                
     
                 <header  class=" header" id="particles-js" id="home">
                     <a class="header__item" href="#about"> <i class="fa-solid fa-angles-down"></i></a>
@@ -81,7 +106,7 @@
                                 <input class="contact__input" type="text" name="Name" placeholder="Full name" required>
                                 <input class="contact__input" type="email" name="Email" placeholder="Email" required>
                                 <textarea class="contact__input" name="Message" placeholder="Message"></textarea>
-                                <button type="submit" onclick="document.getElementById('contact').reset();">Send</button>
+                                <button class="button five" type="submit" onclick="document.getElementById('contact').reset();">Send</button>
                             </form>
                         </div>
                     </section>

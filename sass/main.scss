@@ -33,7 +33,7 @@ body {
 	background-color: rgba(0, 0, 0, 0.4);
 	border-radius: 8px;
 
-	option{
+	option {
 		max-height: 10px;
 	}
 }
@@ -72,13 +72,107 @@ body {
 	position: sticky;
 	top: 0;
 	display: flex;
-	flex-wrap: wrap;
-	flex-direction: column;
 	justify-content: space-between;
 	align-items: center;
 	padding: 2em 4em;
 	background-color: $dark;
 	z-index: 1000;
+
+	&__burger {
+		margin-left: 5em;
+		padding: 1em;
+		cursor: pointer;
+		transition: background-color 0.3s;
+
+		&:hover {
+			.nav__burger-line::after,
+			.nav__burger-line::before {
+				width: 100%;
+			}
+			background-color: rgba(141, 141, 141, 0.212);
+		}
+
+		&-box {
+			position: relative;
+			height: 20px;
+			width: 30px;
+		}
+
+		&-line,
+		&-line::after,
+		&-line::before {
+			position: absolute;
+			height: 2px;
+			right: 0;
+			content: '';
+			background-color: $item-color;
+			transition: width 0.3s;
+		}
+
+		&-line {
+			width: 100%;
+			top: 0;
+		}
+
+		&-line::after {
+			width: 66%;
+			top: 10px;
+		}
+
+		&-line::before {
+			width: 33%;
+			top: 20px;
+		}
+	}
+
+	&__menu {
+		position: absolute;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		flex-direction: column;
+		top: -1px;
+		right: 0;
+		height: 40vh;
+		width: 100%;
+		background-color: $dark;
+		z-index: -1;
+		transform: translateY(-100%);
+		transition: transform .3s;
+
+
+		&--active{
+			transform: translateY(0);
+		}
+
+		&-item{
+			position: relative;
+			margin: 1em 0;
+			padding: 0.5em;
+			font-size: 1.5rem;
+			font-weight: 700;
+			text-decoration: none;
+			text-transform: uppercase;
+			color: $item-color;
+			transition: color 0.3s;
+
+			&:last-child{
+				margin-bottom: 3em;
+			}
+
+			&:hover {
+				color: white;
+				
+			}
+		
+		}
+
+		hr{
+			width: 100%;
+		
+		}
+		
+	}
 
 	&__logo {
 		img {
@@ -88,27 +182,11 @@ body {
 	}
 
 	&__items {
-		margin-top: 1.8em;
 		text-align: center;
 	}
 
 	&__item {
-		position: relative;
-		padding: 0.5em;
-		font-size: 1.5rem;
-		font-weight: 700;
-		text-decoration: none;
-		text-transform: uppercase;
-		color: $item-color;
-		transition: color 0.3s;
-
-		&-first {
-			display: none;
-		}
-
-		&:hover {
-			color: white;
-		}
+		display: none;
 	}
 
 	&__translate {
@@ -285,7 +363,7 @@ body {
 	}
 
 	&__box {
-		padding: 2vw 4vw;
+		padding: 5em 4em;
 		background-color: rgba(0, 0, 0, 0.6);
 		border-radius: 8px;
 		border-right: 3px solid royalblue;
@@ -317,6 +395,7 @@ body {
 			}
 
 			button {
+				position: relative;
 				margin-top: 1.5em;
 				padding: 1em 0;
 				width: 100%;
