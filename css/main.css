@@ -4,6 +4,7 @@
 
 .section-heading {
   position: relative;
+  margin-top: 2em;
   margin-bottom: 2em;
   font-size: 3rem;
   font-weight: 300;
@@ -140,7 +141,6 @@ body {
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  background-color: #181818;
 }
 
 .goog-te-gadget .goog-te-combo {
@@ -216,7 +216,7 @@ body {
   right: 0;
   content: "";
   background-color: #cccbcb;
-  transition: width 0.3s;
+  transition: all 0.3s;
 }
 .nav__burger-line {
   width: 100%;
@@ -229,6 +229,18 @@ body {
 .nav__burger-line::before {
   width: 33%;
   top: 20px;
+}
+.nav__burger-cross .nav__burger-line::before {
+  display: none;
+}
+.nav__burger-cross .nav__burger-line {
+  top: 10px;
+  transform: rotate(45deg);
+}
+.nav__burger-cross .nav__burger-line::after {
+  top: 0;
+  width: 100%;
+  transform: rotate(-90deg);
 }
 .nav__menu {
   position: absolute;

@@ -21,7 +21,7 @@ body {
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	background-color: $dark;
+
 }
 
 .goog-te-gadget .goog-te-combo {
@@ -106,7 +106,7 @@ body {
 			right: 0;
 			content: '';
 			background-color: $item-color;
-			transition: width 0.3s;
+			transition: all 0.3s;
 		}
 
 		&-line {
@@ -122,6 +122,21 @@ body {
 		&-line::before {
 			width: 33%;
 			top: 20px;
+		}
+
+		&-cross{
+			.nav__burger-line::before{
+				display: none;
+			}
+			.nav__burger-line{
+				top: 10px;
+				transform: rotate(45deg);
+			}
+			.nav__burger-line::after{
+				top: 0;
+				width: 100%;
+				transform: rotate(-90deg);
+			}
 		}
 	}
 
@@ -268,6 +283,7 @@ body {
 	background-position: center;
 	background-size: cover;
 
+
 	&__heading {
 		display: flex;
 		align-items: center;
@@ -326,6 +342,9 @@ body {
 		}
 	}
 }
+
+
+
 
 //-----------------------
 //CONTACT
