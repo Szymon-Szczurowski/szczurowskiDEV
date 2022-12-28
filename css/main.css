@@ -148,8 +148,11 @@ body {
   padding: 0.5em;
   width: 150px;
   color: white;
+  border: 1px solid transparent;
   background-color: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
+  transition: scale 0.1s;
+  cursor: pointer;
 }
 .goog-te-gadget .goog-te-combo option {
   max-height: 10px;
@@ -259,6 +262,7 @@ body {
 }
 .nav__menu--active {
   transform: translateY(0);
+  top: 30px;
 }
 .nav__menu-item {
   position: relative;

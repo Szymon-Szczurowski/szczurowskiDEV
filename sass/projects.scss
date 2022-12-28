@@ -1,0 +1,84 @@
+@import './colors';
+
+//-----------------------
+//NAV
+//-----------------------
+
+.nav {
+	&__menu {
+		height: 25vh;
+	}
+}
+
+//-----------------------
+//PROJECTS
+//-----------------------
+
+.projects {
+    padding: 10em 0;
+	display: flex;
+	justify-content: center;
+	height: 100vh;
+	background-color: rgb(94, 92, 90);
+	background-image: $linear-about, url('../img/project-background.jpg');
+
+	&__box {
+		width: 300px;
+		background-color: $dark;
+        overflow: hidden;
+        overflow: hidden;
+
+	}
+
+	&__img {
+
+		img {
+			height: 200px;
+			width: 300px;
+		}
+	}
+
+	&__content {
+        position: relative;
+		padding: 1em 0 0 0;
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		color: $item-color;
+
+	}
+
+	&__text {
+        margin: 1em;
+		font-size: 1.6rem;
+
+        line-height: 20px;
+		text-align: center;
+
+	}
+
+	&__heading {
+		margin-top: 0.5em;
+		font-size: 2.5rem;
+        text-transform: uppercase;
+		color: $main-color;
+	}
+
+	&__link {
+		width: 100%;
+		margin-top: 0.7em;
+		padding: 1em 0;
+		text-align: center;
+		font-size: 1.8rem;
+		text-decoration: none;
+		color: $main-color;
+		background-color: $blue;
+		cursor: pointer;
+		transition: background-color 0.3s;
+        
+
+		&:hover {
+			background-color: royalblue;
+		}
+	}
+}

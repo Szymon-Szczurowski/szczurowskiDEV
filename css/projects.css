@@ -1,0 +1,57 @@
+.nav__menu {
+  height: 25vh;
+}
+
+.projects {
+  padding: 10em 0;
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgb(94, 92, 90);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)), url("../img/project-background.jpg");
+}
+.projects__box {
+  width: 300px;
+  background-color: #181818;
+  overflow: hidden;
+  overflow: hidden;
+}
+.projects__img img {
+  height: 200px;
+  width: 300px;
+}
+.projects__content {
+  position: relative;
+  padding: 1em 0 0 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #cccbcb;
+}
+.projects__text {
+  margin: 1em;
+  font-size: 1.6rem;
+  line-height: 20px;
+  text-align: center;
+}
+.projects__heading {
+  margin-top: 0.5em;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: white;
+}
+.projects__link {
+  width: 100%;
+  margin-top: 0.7em;
+  padding: 1em 0;
+  text-align: center;
+  font-size: 1.8rem;
+  text-decoration: none;
+  color: white;
+  background-color: rgba(65, 105, 225, 0.877);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.projects__link:hover {
+  background-color: royalblue;
+}/*# sourceMappingURL=projects.css.map */
