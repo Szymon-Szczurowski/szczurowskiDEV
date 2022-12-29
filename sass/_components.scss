@@ -6,13 +6,13 @@
 
 .section-heading {
 	position: relative;
-	margin-top: 2em;
 	margin-bottom: 2em;
 	font-size: 3rem;
 	font-weight: 300;
 	text-transform: uppercase;
 	text-align: center;
 	letter-spacing: 2px;
+	color: $main-color;
 } 
 
 
@@ -24,4 +24,5 @@
 	background-size: 15%;
 	z-index: 100000;
 }
+
 

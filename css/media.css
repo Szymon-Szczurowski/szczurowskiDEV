@@ -38,10 +38,21 @@
   .about__text {
     font-size: 1.6rem;
   }
+  .experience {
+    margin-bottom: 8em;
+  }
+  .experience__box {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+  .experience__item {
+    margin-bottom: 0;
+  }
   .contact {
     height: 100%;
   }
   .contact__box {
+    margin-top: 7em;
     padding: 4vw 6vw;
   }
   .contact__box form input {
@@ -144,6 +155,9 @@
   .about__text {
     line-height: 3rem;
   }
+  .about__box {
+    margin-bottom: 0;
+  }
   .contact__box form input {
     font-size: 15px;
     width: 500px;
@@ -183,6 +197,9 @@
 @media (min-width: 1200px) {
   .nav {
     padding: 2em 8em;
+  }
+  .experience__box {
+    grid-template-columns: repeat(3, 1fr);
   }
   .contact__box {
     padding: 4vw 5vw;

@@ -88,6 +88,23 @@
 	}
 
 	//-----------------------
+	//EXPERIENCE
+	//-----------------------
+
+	.experience{
+		margin-bottom: 8em;
+		&__box{
+			grid-template-columns: repeat(2, 1fr);
+			gap: 50px;
+		}
+
+		&__item{
+			margin-bottom: 0;
+		}
+
+	}
+
+	//-----------------------
 	//CONTACT
 	//-----------------------
 
@@ -95,6 +112,7 @@
 		height: 100%;
 
 		&__box {
+			margin-top: 7em;
 			padding: 4vw 6vw;
 
 			form {
@@ -252,6 +270,10 @@
 		&__text {
 			line-height: 3rem;
 		}
+
+		&__box {
+			margin-bottom: 0;
+		}
 	}
 
 	//-----------------------
@@ -325,6 +347,20 @@
 
 	.nav {
 		padding: 2em 8em;
+	}
+
+		//-----------------------
+	//EXPERIENCE
+	//-----------------------
+
+	.experience{
+
+		&__box{
+			grid-template-columns: repeat(3, 1fr);
+		}
+
+
+
 	}
 
 	//-----------------------
