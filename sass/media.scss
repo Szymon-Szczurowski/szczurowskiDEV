@@ -91,17 +91,17 @@
 	//EXPERIENCE
 	//-----------------------
 
-	.experience{
+	.experience {
 		margin-bottom: 8em;
-		&__box{
+		&__box {
+			max-width: none;
 			grid-template-columns: repeat(2, 1fr);
 			gap: 50px;
 		}
 
-		&__item{
+		&__item {
 			margin-bottom: 0;
 		}
-
 	}
 
 	//-----------------------
@@ -277,6 +277,27 @@
 	}
 
 	//-----------------------
+	//EXPERIENCE
+	//-----------------------
+
+	.experience {
+		&__item {
+			&-icon {
+				margin-top: 2em;
+				margin-bottom: 3em;
+				i {
+					font-size: 6rem;
+				}
+			}
+
+			&-point {
+				height: 30px;
+				width: 30px;
+			}
+		}
+	}
+
+	//-----------------------
 	//CONTACT
 	//-----------------------
 
@@ -349,18 +370,15 @@
 		padding: 2em 8em;
 	}
 
-		//-----------------------
+	//-----------------------
 	//EXPERIENCE
 	//-----------------------
 
-	.experience{
-
-		&__box{
+	.experience {
+		margin-bottom: 10em;
+		&__box {
 			grid-template-columns: repeat(3, 1fr);
 		}
-
-
-
 	}
 
 	//-----------------------

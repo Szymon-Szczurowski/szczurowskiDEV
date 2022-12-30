@@ -4,7 +4,8 @@
 
 .section-heading {
   position: relative;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
+  margin-top: 2.5em;
   font-size: 3rem;
   font-weight: 300;
   text-transform: uppercase;
@@ -421,28 +422,41 @@ body {
 }
 
 .experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   height: 100%;
   background-color: #181818;
   margin-bottom: 3em;
 }
 .experience__heading {
-  margin-bottom: 1em;
   font-size: 1.8rem;
   text-align: left;
-  color: white;
+  color: #cccbcb;
 }
 .experience .wrapper {
   display: flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 1400px;
   text-align: center;
 }
 .experience__box {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: minmax(306px, 1fr);
+  max-width: 438px;
+  margin: 0 5em;
+  width: 100%;
 }
 .experience__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
   margin-bottom: 6em;
-  padding: 2em;
+  padding: 2em 1em;
   background-color: #395b64;
   border-radius: 8px;
   box-shadow: 2px 3px 5px #ffd269;
@@ -452,7 +466,8 @@ body {
   scale: 1.1;
 }
 .experience__item-icon {
-  margin-bottom: 2em;
+  margin-top: 2em;
+  margin-bottom: 3em;
 }
 .experience__item-icon i {
   font-size: 5rem;
